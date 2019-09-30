@@ -16,8 +16,8 @@ exports.motes = {
     label   : 'Solar Pump Controller',
     icon : 'icon_solar_pump.png',
     settings : { lowVoltageValue: '11.2' },
-    controls : { power : { states: [{ label:'On', action:'PWR', icon:'power', css:'background-color:#9BFFBE;', condition:''+function(node) { return node.metrics['STATUS']!=null && node.metrics['STATUS'].value == 'OFF';}},
-                                    { label:'Off', action:'PWR', icon:'power', css:'background-color:#FF9B9B;', condition:''+function(node) { return node.metrics['STATUS']!=null && node.metrics['STATUS'].value != 'OFF';}}
+    controls : { power : { states: [{ label:'On', action:'PWR', icon:'power', css:'background-color:#9BFFBE;', condition:''+function(node) { return node.metrics['PUMP']!=null && node.metrics['PUMP'].value == 'OFF';}},
+                                    { label:'Off', action:'PWR', icon:'power', css:'background-color:#FF9B9B;', condition:''+function(node) { return node.metrics['PUMP']!=null && node.metrics['PUMP'].value != 'OFF';}}
                                    ]},
                  refresh : { states: [{ label:'Refresh', action:'STS', icon:'refresh' }]}, 
                  run : { states: [{ label:'Run', action:'RUN', icon:'arrow-u', css:'background-color:#9BFFBE;'}]},
